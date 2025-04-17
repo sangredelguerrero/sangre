@@ -1,0 +1,534 @@
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+  background-color: #f5f5f5;
+  color: #333;
+}
+
+/* Header */
+header {
+  background-color: #27077e;
+  color: #fff;
+  text-align: center;
+  padding: 1rem;
+}
+
+.subtitulo-guerreiro {
+  font-style: italic;
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+nav .botao {
+  text-decoration: none;
+  color: #fff;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+nav .botao:hover {
+  color: #ffcc00;
+}
+
+/* Main */
+main {
+  padding: 2rem;
+  text-align: center;
+}
+
+.titulo-muaythai {
+  font-size: 2.5rem;
+  color: #27077e;
+  margin-bottom: 1rem;
+  animation: fadeIn 1.5s ease;
+}
+
+.banner {
+  max-width: 100%;
+  height: auto;
+  margin: 1.5rem 0;
+  animation: fadeInUp 1.2s ease;
+}
+.banner {
+  max-width: 500px;  /* ou outro valor que você prefira, tipo 300px */
+  width: 100%;
+  height: auto;
+  margin: 1.5rem auto;
+  display: block;
+  animation: fadeInUp 1.2s ease;
+}
+
+.lista-categ {
+  position: absolute;
+  top: 350px;
+  left: 200px;
+  margin: 0;
+}
+
+.categ {
+  font-size: 2.3rem;
+  margin: 0.5rem 0;
+}
+
+.frase-motivacional {
+  font-size: 1.2rem;
+  color: #444;
+  margin-top: 2rem;
+}
+
+/* Imagens finais */
+.imagens-laterais {
+  position: absolute; /* ou 'fixed' se quiser fixo na rolagem */
+  top: 350px;
+  right: 200px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.bandt, .bras {
+  width: 100px;
+  height: auto;
+  margin: 0.5rem 0;
+  transition: transform 0.3s ease;
+}
+
+.bandt:hover, .bras:hover {
+  transform: scale(1.1);
+}
+
+/* Footer */
+footer {
+  background-color: #27077e;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+  margin-top: 3rem;
+}
+
+/* Lightbox */
+.lightbox {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.8);
+  justify-content: center;
+  align-items: center;
+}
+
+.lightbox-content {
+  background: white;
+  padding: 2rem;
+  max-width: 90%;
+  max-height: 80%;
+  overflow: auto;
+  border-radius: 8px;
+}
+
+.lightbox .close {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  font-size: 2rem;
+  color: white;
+  cursor: pointer;
+}
+
+/* Animações */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+  .titulo-muaythai {
+    font-size: 2rem;
+  }
+
+  nav {
+    flex-direction: column;
+    gap: 0.8rem;
+  }
+
+  .categ {
+    font-size: 1.1rem;
+  }
+
+  .bandt, .bras {
+    width: 70px;
+  }
+
+  .lightbox-content {
+    padding: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .titulo-muaythai {
+    font-size: 1.6rem;
+  }
+
+  .subtitulo-guerreiro {
+    font-size: 0.9rem;
+  }
+
+  .categ {
+    font-size: 1rem;
+  }
+}
+
+
+/* === CSS ESPECÍFICO DA PÁGINA SOBRE === */
+
+body.sobre {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #000;
+  color: #f0f8f1;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+body.sobre header {
+  padding: 10px 20px;
+  background-color: #111;
+  text-align: right;
+  animation: fadeInUp 1s ease;
+}
+
+body.sobre header nav a {
+  color: #fff;
+  margin: 0 10px;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+body.sobre header nav a:hover {
+  color: #ff4d00;
+}
+
+.logo-container-sobre {
+  display: flex;
+  justify-content: center;
+  margin: 20px 0;
+  animation: fadeInUp 1s ease;
+}
+
+.logo-background {
+  background-color: #f3efef00;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(255, 77, 0, 0.2);
+  transition: transform 0.5s;
+}
+
+.logo-background:hover {
+  transform: scale(1.05);
+}
+
+.logo {
+  max-width: 200px;
+}
+
+.conteudo {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  padding: 20px;
+  gap: 20px;
+  animation: fadeInUp 1.2s ease;
+}
+
+.quadro-esquerdo, .quadro-direito {
+  background-color: #0b0b0c;
+  padding: 20px;
+  border-radius: 10px;
+  flex: 1 1 300px;
+  max-width: 600px;
+  box-shadow: 0 0 10px rgba(255, 77, 0, 0.1);
+}
+
+.quadro-esquerdo h2, .quadro-direito h2 {
+  color: #0bb63e;
+  margin-top: 0;
+}
+
+.quadro-esquerdo ul {
+  list-style: none;
+  padding: 0;
+}
+
+.quadro-esquerdo li {
+  color: #0bb63e;
+  padding: 10px 0;
+  border-bottom: 1px solid #0bb63e;
+  transition: color 0.3s;
+}
+
+.quadro-esquerdo li:hover {
+  color: #0bb63e;
+}
+
+.galeria {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.galeria img,
+.galeria video {
+  width: calc(33.33% - 10px);
+  aspect-ratio: 1 / 1; /* Garante que o formato seja sempre quadrado */
+  object-fit: cover;
+  border-radius: 8px;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.galeria img:hover,
+.galeria video:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 10px #ff4d00;
+}
+@media (max-width: 768px) {
+  .galeria img,
+  .galeria video {
+    width: calc(50% - 10px);
+    aspect-ratio: 1 / 1;
+  }
+}
+
+body.sobre footer {
+  background-color: #111;
+  text-align: center;
+  padding: 10px;
+  color: #aaa;
+  animation: fadeInUp 1.5s ease;
+}
+
+  body.sobre header {
+    text-align: center;
+  }
+
+  .logo-background {
+    padding: 15px;
+  }
+
+
+@media (max-width: 480px) {
+  .galeria img,
+  .galeria video {
+    width: 100%;
+    height: auto;
+  }
+
+  .conteudo {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .quadro-esquerdo, .quadro-direito {
+    width: 100%;
+  }
+}
+.lightbox {
+  display: none;
+  position: fixed;
+  z-index: 9999;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  justify-content: center;
+  align-items: center;
+}
+
+.lightbox-content img,
+.lightbox-content video {
+  max-width: 90%;
+  max-height: 80vh;
+  border-radius: 10px;
+}
+
+.lightbox .close {
+  position: absolute;
+  top: 20px;
+  right: 35px;
+  color: #fff;
+  font-size: 40px;
+  cursor: pointer;
+  font-weight: bold;
+  z-index: 10000;
+  transition: color 0.3s;
+}
+
+.lightbox .close:hover {
+  color: #ff4d00;
+}
+
+/* Lightbox */
+.lightbox {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: none;  /* Inicialmente oculto */
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.lightbox.active {
+  display: flex;  /* Torna visível quando a classe 'active' for adicionada */
+}
+
+.lightbox-content {
+  position: relative;
+  max-width: 90%;
+  max-height: 90%;
+}
+
+.lightbox .close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 30px;
+  color: white;
+  cursor: pointer;
+  z-index: 1001;
+}
+
+.lightbox .close:hover {
+  color: #ff4d00;
+}
+/* ======================== */
+/* ESTILOS GERAIS      contato     */
+/* ======================== */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+header nav {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  background-color: #27077e;
+  padding: 1rem;
+}
+
+.botao {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+main {
+  padding: 2rem;
+  text-align: center;
+}
+
+.redes-sociais {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  align-items: center;
+  margin-top: 1.5rem;
+}
+
+.redes-sociais a {
+  font-size: 1.2rem;
+  color: #27077e;
+  text-decoration: none;
+}
+
+.redes-sociais a:hover {
+  text-decoration: underline;
+}
+
+.logo-container-contato {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 2rem;
+  gap: 2rem;
+}
+
+.logo-canto {
+  width: 140px;
+  max-width: 30%;
+}
+
+.texto-entre-logos {
+  max-width: 600px;
+  text-align: center;
+  font-size: 1.1rem;
+  color: #333;
+}
+
+footer {
+  background-color: #27077e;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+  margin-top: 2rem;
+}
+
+/* Responsivo */
+@media (max-width: 600px) {
+  .logo-container-contato {
+    flex-direction: column;
+  }
+
+  .logo-canto {
+    max-width: 80px;
+  }
+
+  .texto-entre-logos {
+    font-size: 1rem;
+    padding: 0 1rem;
+  }
+
+  header nav {
+    flex-direction: column;
+    align-items: center;
+  }
+}
